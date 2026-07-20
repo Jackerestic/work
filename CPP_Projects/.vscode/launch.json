@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Launch (Windows)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/a.exe",   // 与 tasks.json 生成的文件名一致
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/mingw/bin/gdb.exe",  // 改成你的 gdb 实际路径
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++ build active file"   // 与 tasks.json 的 label 对应
+        }
+    ]
+}
